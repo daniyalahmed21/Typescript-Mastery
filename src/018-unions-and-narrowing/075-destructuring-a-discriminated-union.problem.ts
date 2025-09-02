@@ -13,10 +13,12 @@ type Square = {
 
 type Shape = Circle | Square;
 
-function calculateArea({ kind, radius, sideLength }: Shape) {
-  if (kind === "circle") {
+function calculateArea(Shape: Shape) {
+  if (Shape.kind === "circle") {
+    const { radius } = Shape;
     return Math.PI * radius * radius;
   } else {
+    const { sideLength } = Shape;
     return sideLength * sideLength;
   }
 }
