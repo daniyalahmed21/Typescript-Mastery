@@ -1,4 +1,14 @@
-interface Scores {}
+type Subjects =
+  | "math"
+  | "english"
+  | "athletics"
+  | "french"
+  | "spanish"
+  | "english";
+
+type Scores = {
+  [k in Subjects]: number;
+};
 
 // @ts-expect-error science is missing!
 const scores: Scores = {

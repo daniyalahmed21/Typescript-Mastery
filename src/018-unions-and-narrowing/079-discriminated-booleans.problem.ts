@@ -4,17 +4,13 @@ type User = {
   id: string;
 };
 
-type ApiResponse = [boolean, User[] | string];
+type ApiResponse = [false, string] | [true, User[]];
 
 async function fetchData(): Promise<ApiResponse> {
   try {
     const response = await fetch("https://api.example.com/data");
     if (!response.ok) {
-      return [
-        false,
-        // Imagine more detailed error handling here
-        "An error occurred",
-      ];
+      return [false, "An error occurred"];
     }
 
     const data = await response.json();
