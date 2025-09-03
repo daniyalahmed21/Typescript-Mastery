@@ -1,6 +1,11 @@
 type Environment = "development" | "production" | "staging";
 
-type Configurations = unknown;
+type Configurations = {
+  [env in Environment]: { //mapped types
+    apiBaseUrl: string;
+    timeout: number;
+  };
+};
 
 const configurations: Configurations = {
   development: {
