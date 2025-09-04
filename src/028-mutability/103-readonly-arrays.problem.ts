@@ -1,4 +1,4 @@
-function printNames(names: string[]) {
+function printNames(names: Readonly<string[]>) {
   for (const name of names) {
     console.log(name);
   }
@@ -8,4 +8,5 @@ function printNames(names: string[]) {
 
   // @ts-expect-error
   names[0] = "Billy";
+
 }

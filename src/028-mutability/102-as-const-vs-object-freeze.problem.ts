@@ -18,6 +18,6 @@ const buttonAttributes = Object.freeze({
   confirm: {
     type: "button",
   },
-});
+} as const) ;
 
 modifyButtons(buttonAttributes);
