@@ -13,6 +13,10 @@ class CanvasNode {
     this.x = x;
     this.y = y;
   }
+
+  get position(): { x: number; y: number } {
+    return { x: this.x, y: this.y };
+  }
 }
 
 it("Should be able to move", () => {
