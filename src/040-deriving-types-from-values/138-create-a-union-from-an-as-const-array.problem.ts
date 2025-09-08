@@ -9,7 +9,8 @@ export const programModes = [
   "plannedSelfDirected",
 ] as const;
 
-type AllPrograms = (typeof programModes)[keyof typeof programModes];
+// type AllPrograms = (typeof programModes)[0 | 1 | 2 | 3 | 4 | 5]; accessing tuple
+type AllPrograms = (typeof programModes)[number];
 
 type test = Expect<
   Equal<
