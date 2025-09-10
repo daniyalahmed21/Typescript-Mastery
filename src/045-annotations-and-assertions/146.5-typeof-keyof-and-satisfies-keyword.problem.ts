@@ -15,6 +15,11 @@ const configurations = {
     // @ts-expect-error
     notAllowed: true,
   },
+} satisfies {
+  [key: string]: {
+    apiBaseUrl: string;
+    timeout: number;
+  };
 };
 
 type Environment = keyof typeof configurations;
