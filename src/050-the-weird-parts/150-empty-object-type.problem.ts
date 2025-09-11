@@ -1,5 +1,5 @@
 const acceptAnythingExceptNullOrUndefined = (
-  input
+  input:{}
 ) => {};
 
 acceptAnythingExceptNullOrUndefined("hello");

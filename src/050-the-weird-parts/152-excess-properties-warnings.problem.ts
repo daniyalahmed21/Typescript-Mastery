@@ -5,7 +5,9 @@ interface FetchOptions {
   body?: string;
 }
 
-const options = {
+const myFetch = async (options: FetchOptions) => {};
+
+const options:FetchOptions = {
   url: "/",
   method: "GET",
   headers: {
@@ -17,6 +19,5 @@ const options = {
   }),
 };
 
-const myFetch = async (options: FetchOptions) => {};
 
 myFetch(options);
