@@ -15,7 +15,8 @@ const getUserFromLocalStorage = (id: string) => {
 
 try {
   const user = getUserFromLocalStorage("user-1");
-} catch (
-  // How do we make this typed as PossibleErrors?
-  e
-) {}
+} catch (e : unknown) {
+  if(e instanceof SyntaxError){
+    
+  }
+}
