@@ -2,3 +2,4 @@
 
 // @ts-expect-error
 myFunc();
+
