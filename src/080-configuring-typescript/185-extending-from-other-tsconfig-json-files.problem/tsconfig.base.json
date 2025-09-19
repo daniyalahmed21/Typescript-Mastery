@@ -9,9 +9,4 @@
     "skipLibCheck": true,
     "isolatedModules": true,
   },
-    "files": [],
-    "references": [
-      { "path": "./src/client/tsconfig.json" },
-      { "path": "./src/client/tsconfig.json" }
-    ]
 }
